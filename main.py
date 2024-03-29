@@ -318,10 +318,8 @@ def frontend_top():
 def frontend_tgstat():
     st.header('Упоминания компании и объектов в мессенджере Telegram')
 
-    choose_search = st.selectbox('Выберете нужный проект', ('ГК ФСК', 'Первый ДСК', 'ЖК Архитектор'), index=None)
+    choose_search = st.selectbox('Выберете нужный проект', ('Переделкино ближнее', 'Первый ДСК', 'ЖК Архитектор', 'Резиденции сколково'))
 
-    if choose_search is None: 
-        st.stop()
     
     if choose_search != st.session_state.choose_search:
         st.session_state.post = 0
