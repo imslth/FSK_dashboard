@@ -16,7 +16,7 @@ api_key_tgstat = st.secrets.api_key_tgstat
 
 
 def main():
-    st.title('Состояние информационного поля компании ГК ФСК')
+    st.title('Состояние информационного поля компании')
 
     st.header('Новые публикации в информационном поле (на базе источника https://brandanalytics.ru/)')
 
@@ -208,7 +208,7 @@ def frontend_brand(time_in: str, time_out: str) -> None:
 
 
 def frontend_top():
-    st.header('Поисковая выдача объектов компании ГК ФСК')
+    st.header('Поисковая выдача объектов компании')
 
     df = read_excel()
 
