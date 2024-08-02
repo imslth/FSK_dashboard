@@ -10,6 +10,8 @@ import plotly.graph_objects as go
 st.set_page_config(layout="wide")
 
 
+
+
 theme_id = st.secrets.theme_id
 api_key_br = st.secrets.api_key_br
 api_key_tgstat = st.secrets.api_key_tgstat
@@ -21,9 +23,12 @@ def main():
     st.header('Новые публикации в информационном поле (на базе источника https://brandanalytics.ru/)')
 
     today = datetime.datetime.now()
+    d2 = datetime.timedelta(days=10)
+    minus = today - d2
+
     choose_date = st.date_input(
         "Выберете период для получения данных",
-        (datetime.date(today.year, today.month, today.day - 10), datetime.date(today.year, today.month, today.day)),
+        (datetime.date(minus.year, minus.month, minus.day), datetime.date(today.year, today.month, today.day)),
 
     )
 
